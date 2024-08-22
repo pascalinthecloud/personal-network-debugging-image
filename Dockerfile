@@ -11,7 +11,7 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc |  tee /etc/apt/trust
 
 # Update the package list and install mssql-tools18 and unixodbc-dev
 RUN apt-get update && \
-    ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
+    ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev -y
 
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
