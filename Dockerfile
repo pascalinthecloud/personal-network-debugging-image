@@ -3,7 +3,7 @@ FROM ubuntu:24.10
 
 # Update the package list and install packages
 RUN apt-get update && \
-    apt-get install -y iputils-ping traceroute telnet dnsutils mtr tcpdump curl && 
+    apt-get install -y iputils-ping traceroute telnet dnsutils mtr tcpdump curl
 
 # Import the public repository GPG keys & Register the Microsoft Ubuntu repository
 RUN curl https://packages.microsoft.com/keys/microsoft.asc |  tee /etc/apt/trusted.gpg.d/microsoft.asc && \ 
