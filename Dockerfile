@@ -13,7 +13,8 @@ RUN apt-get update && \
     # Performance testing
     iperf3 \
     # File utilities
-    rsync 
+    rsync \
+		netcat-traditional
 
 # Import the public repository GPG keys & Register the Microsoft Ubuntu repository
 RUN curl https://packages.microsoft.com/keys/microsoft.asc |  tee /etc/apt/trusted.gpg.d/microsoft.asc && \ 
